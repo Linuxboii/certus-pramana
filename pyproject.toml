@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certus-pramana"
+version = "1.0.0"
+description = "TLS certificate checker for hosts and PEM files: expiry thresholds, SANs, hostname match, protocol and cipher."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Sushanth Kasturi" }]
+requires-python = ">=3.10"
+keywords = ["tls", "ssl", "certificates", "monitoring", "expiry", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Topic :: Security",
+    "Topic :: System :: Monitoring",
+]
+
+[project.scripts]
+certus-pramana = "certus_pramana.cli:main"
+
+[tool.setuptools]
+packages = ["certus_pramana"]
